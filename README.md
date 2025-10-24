@@ -88,8 +88,7 @@ Este comando criará o arquivo src/users.sqlite e inserirá o usuário de teste 
 php -S localhost:8001
 ```
 
-- Acesse: A página de login inicial é http://localhost:8001/public/login.html.
-  
+- Acesse: A página de login inicial é http://localhost:8001/public/login.html.  
 1. ​Acesso Inicial: Abra login.html.
 ​2. Credenciais de Teste:
 ​Usuário: admin
