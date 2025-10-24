@@ -24,28 +24,19 @@
 
 Este projeto é um exercício crucial focado nos pilares da Segurança e Autenticação em PHP: Hashing de senhas, gerenciamento de sessões e controle de acesso a páginas restritas.
 
-​Ele integra o uso de Programação Orientada a Objetos (POO) e PDO (PHP Data Objects) para garantir que todas as operações sejam seguras e robustas.
-​
+Ele integra o uso de Programação Orientada a Objetos (POO) e PDO (PHP Data Objects) para garantir que todas as operações sejam seguras e robustas.
+
 ---
 
 ## 🔒 Recursos de Segurança e Tecnologia
 
-​Hashing Seguro (password_hash): As senhas não são armazenadas em texto simples. Utilizamos a função password_hash() com o algoritmo BCRYPT (o padrão recomendado) para hashear a senha antes de salvar no banco.
-​Verificação Segura (password_verify): A função password_verify() é usada para comparar a senha fornecida pelo usuário com o hash armazenado, prevenindo ataques de timing e garantindo a segurança.
-​Gerenciamento de Sessão: O fluxo de login e logout utiliza as funções nativas de sessão do PHP (session_start(), $_SESSION, session_destroy()) para rastrear o estado do usuário.
-​Controle de Acesso: A página restricted.php verifica o status da sessão antes de renderizar qualquer conteúdo, redirecionando o usuário não autenticado.
-​POO com PDO: Uma classe AuthManager encapsula toda a lógica de segurança e comunicação com o banco de dados SQLite, mantendo o código limpo e organizado.
-​
+- **Hashing Seguro (password_hash):** As senhas não são armazenadas em texto simples. Utilizamos a função `password_hash()` com o algoritmo BCRYPT (o padrão recomendado) para hashear a senha antes de salvar no banco.  
+- **Verificação Segura (password_verify):** A função `password_verify()` é usada para comparar a senha fornecida pelo usuário com o hash armazenado, prevenindo ataques de timing e garantindo a segurança.  
+- **Gerenciamento de Sessão:** O fluxo de login e logout utiliza as funções nativas de sessão do PHP (`session_start()`, `$_SESSION`, `session_destroy()`) para rastrear o estado do usuário.  
+- **Controle de Acesso:** A página `restricted.php` verifica o status da sessão antes de renderizar qualquer conteúdo, redirecionando o usuário não autenticado.  
+- **POO com PDO:** Uma classe `AuthManager` encapsula toda a lógica de segurança e comunicação com o banco de dados SQLite, mantendo o código limpo e organizado.
+  
 ---
-
-## 🧠 Tecnologias utilizadas
-
-​Backend: PHP 7.4+ (POO, Sessões, password_hash/password_verify).
-​Segurança: PDO (Statements Preparados) para comunicação segura com o banco de dados.
-​Banco de Dados: SQLite (arquivo único para armazenar usuários e hashes).
-​Frontend: HTML e Tailwind CSS.
-​
---
 
 ## ⚙️ Configuração e Instalação
 
