@@ -89,13 +89,19 @@ php -S localhost:8001
 ```
 
 - Acesse: A página de login inicial é http://localhost:8001/public/login.html.
+  
 1. ​Acesso Inicial: Abra login.html.
+   
 ​2. Credenciais de Teste:
 ​Usuário: admin
 ​Senha: senha123
+
 ​3. Tentativa de Acesso Direto: Tente acessar http://localhost:8001/public/restricted.php diretamente. Você será redirecionado para a página de login com uma mensagem de "Acesso negado".
+
 4. ​Login com Sucesso: Insira as credenciais de teste. O app.php verificará o hash, iniciará a sessão e redirecionará para a restricted.php.
+   
 5. Logout: Clique no botão "Sair (Logout)". O app.php destruirá a sessão e o redirecionará de volta para o login.html.
+   
 ---
 
 ## 🤝 Contribuições
