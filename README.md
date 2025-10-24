@@ -89,6 +89,8 @@ php -S localhost:8001
 ```
 - **Acesse:** A página de login inicial é [http://localhost:8001/public/login.html](http://localhost:8001/public/login.html).
 
+---
+
 ### Passos de Teste
 
 1. **Acesso Inicial:** Abra `login.html`.  
