@@ -38,8 +38,6 @@ Ele integra o uso de Programação Orientada a Objetos (POO) e PDO (PHP Data Obj
   
 ---
 
----
-
 ## 🧠 Tecnologias utilizadas
 
 ​Backend: PHP 7.4+ (POO, Sessões, password_hash/password_verify).
