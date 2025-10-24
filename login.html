@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Área Restrita</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="author" content="Onivaldo Miquelino">          
+    <style> body { font-family: ui-sans-serif, system-ui; } </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+    <div class="w-full max-w-md bg-white p-8 rounded-xl shadow-2xl">
+        <h1 class="text-3xl font-bold text-center text-indigo-700 mb-6">Acesso Restrito</h1>
+        
+        <div id="statusMessage" class="mb-4 hidden p-3 rounded-md text-sm text-center"></div>
+
+        <form action="../src/app.php" method="POST" class="space-y-4">
+            <input type="hidden" name="action" value="login">
+            
+            <div>
+                <label for="username" class="block text-sm font-medium text-gray-700">Usuário:</label>
+                <input type="text" id="username" name="username" required placeholder="admin"
+                       class="w-full border border-gray-300 rounded-lg p-3 mt-1 focus:border-indigo-500">
+            </div>
+            
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Senha:</label>
+                <input type="password" id="password" name="password" required placeholder="senha123"
+                       class="w-full border border-gray-300 rounded-lg p-3 mt-1 focus:border-indigo-500">
+            </div>
+
+            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition">
+                Entrar
+            </button>
+        </form>
+        
+        <p class="text-center text-xs text-gray-400 mt-4">Usuário/Senha padrão: admin / senha123</p>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const statusDiv = document.getElementById('statusMessage');
+        statusDiv.classList.remove('hidden');
+
+        if (urlParams.has('error')) {
+            statusDiv.textContent = '❌ Credenciais inválidas. Tente novamente.';
+            statusDiv.classList.add('bg-red-100', 'text-red-800');
+        } else if (urlParams.has('logged_out')) {
+            statusDiv.textContent = '✅ Você saiu com sucesso.';
+            statusDiv.classList.add('bg-green-100', 'text-green-800');
+        } else if (urlParams.has('unauthorized')) {
+             statusDiv.textContent = '⚠️ Acesso negado. Por favor, faça login.';
+            statusDiv.classList.add('bg-yellow-100', 'text-yellow-800');
+        } else {
+             statusDiv.classList.add('hidden'); // Oculta se não houver parâmetro
+        }
+    </script>
+</body>
+</html>
+    
