@@ -56,6 +56,8 @@ php-auth-system/
 ├── AuthManager.php
 ├── init_db.php
 ├── app.php
+├── README.md
+├── .gitignore
 └── users.sqlite
 ```
 ---
